@@ -43,11 +43,17 @@ const PAGE = {
   }
 };
 
+const HSCODE = {
+  base: "http://localhost:3010",
+  context: "/hs"
+};
+
 const ENDPOINTS = {
   AUTH,
   USER,
   ROLE,
-  PAGE
+  PAGE,
+  HSCODE
 };
 
 module.exports = {

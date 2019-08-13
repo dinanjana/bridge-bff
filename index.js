@@ -8,7 +8,7 @@ const { handlers } = require('./api');
 const log4js = require('log4js');
 const { createRedisClient } = require('./repository');
 const { HTTP_METHODS } = require('./conf');
-
+var cors = require('cors')
 log4js.configure('./conf/log4js.json');
 const log = log4js.getLogger('startup');
 
@@ -17,7 +17,7 @@ const port = 8081;
 
 app.use(BodyParser.json());
 app.use(BodyParser.urlencoded({ extended: true }));
-
+app.use(cors())
 const registerHandlers = () => {
   _.map(handlers, (handlers, path) => {
     _.map(handlers, ({method, handler}) => {
