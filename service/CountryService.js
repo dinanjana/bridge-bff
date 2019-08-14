@@ -10,7 +10,6 @@ const log = log4js.getLogger('countryService');
 const getCountryCodes = () => {
     log.info(`Get all HS Codes of client`);
     const response = countryRepo.getCountryCodes();
-    console.error(response);
     return response;
 };
 

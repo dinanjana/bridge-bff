@@ -5,6 +5,7 @@ module.exports = {
   PATHS: {
     LOGIN: '/login',
     HSCODE: '/hscode',
+    HSCODE_ID: '/hscode/:id',
     COUNTRYCODE: '/countries'
   }
 };

@@ -24,3 +24,4 @@ yarn-error.log*
 #logs
 /log
 /.idea/vcs.xml
+dump.rdb

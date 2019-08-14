@@ -12,19 +12,23 @@ const JSON = require('circular-json');
 
 const getHsCodesHandler = (req, res) => {
     try {
-        if (req.params.id !== null) {
-            hsCodeService.getHsCodes(req.params.id).then(function(result) {
+        if (req.params.id !== null && typeof req.params.id !== 'undefined') {
+            hsCodeService.getHsCode(req.params.id).then(function(result) {
                 const json = JSON.stringify(result.data);
                 return res.send(json)
             }).catch(function(error) {
-                return res.send(error);
+                console.error(error);
+                const json = JSON.stringify(error);
+                return res.send(json);
             });
         } else {
             hsCodeService.getHsCodes().then(function(result) {
                 const json = JSON.stringify(result.data);
                 return res.send(json)
             }).catch(function(error) {
-                return res.send(error);
+                console.error(error);
+                const json = JSON.stringify(error);
+                return res.send(json);
             });
         }
     } catch (error) {
@@ -76,5 +80,9 @@ module.exports = {
                 handler: putHandler
             }
         ],
+        [PATHS.HSCODE_ID] :[{
+            method: HTTP_METHODS.GET,
+            handler: getHsCodesHandler
+        }]
     }
 };
