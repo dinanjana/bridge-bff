@@ -48,12 +48,47 @@ const HSCODE = {
   context: "/hs"
 };
 
+const REGAPPROVAL = {
+  base: "http://localhost:3010",
+  context: "/regapproval"
+};
+
+const SUPPLIER = {
+  base: "http://localhost:3020",
+  context: "/supplier"
+};
+
+const INCOTERM = {
+  base: "http://localhost:3020",
+  context: "/incoterm"
+};
+const BANK = {
+  base: "http://localhost:3020",
+  context: "/bank"
+};
+
+const PAYMENT_TERM = {
+  base: "http://localhost:3020",
+  context: "/paymentterm"
+};
+
+const TRADE_AGREEMENT = {
+  base: "http://localhost:3010",
+  context: "/tradeagreement"
+};
+
 const ENDPOINTS = {
   AUTH,
   USER,
   ROLE,
   PAGE,
-  HSCODE
+  HSCODE,
+  REGAPPROVAL,
+  SUPPLIER,
+  INCOTERM,
+  BANK,
+  PAYMENT_TERM,
+  TRADE_AGREEMENT
 };
 
 module.exports = {
