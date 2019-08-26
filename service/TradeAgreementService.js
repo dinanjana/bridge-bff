@@ -10,7 +10,6 @@ const log = log4js.getLogger('supplierService');
 const getAll = () => {
     log.info(`Get all supplier of client`);
     const response = tradeAgreementRepo.getAll();
-    console.error(response);
     return response;
 };
 

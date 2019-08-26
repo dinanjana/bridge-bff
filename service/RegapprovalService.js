@@ -10,7 +10,6 @@ const log = log4js.getLogger('hsCodeService');
 const getAll = () => {
     log.info(`Get all HS Codes of client`);
     const response = approvalsRepo.getAll();
-    console.error(response);
     return response;
 };
 

@@ -12,7 +12,6 @@ const log = log4js.getLogger('hsCodeService');
 const getHsCodes = () => {
     log.info(`Get all HS Codes of client`);
     const response = hscodeRepo.getHsCodes();
-    console.error(response);
     return response;
 };
 

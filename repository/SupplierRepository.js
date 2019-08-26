@@ -25,7 +25,6 @@ const getAll = async () => {
     const url = ENDPOINTS.SUPPLIER.base + '/' + client + ENDPOINTS.SUPPLIER.context;
     try {
         log.info(`Calling ${url}`);
-        console.error(url);
         const response = await axios.get(url);
         return response;
     } catch (err) {

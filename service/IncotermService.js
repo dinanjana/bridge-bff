@@ -10,7 +10,6 @@ const log = log4js.getLogger('incotermService');
 const getAll = () => {
     log.info(`Get all supplier of client`);
     const response = incotermRepo.getAll();
-    console.error(response);
     return response;
 };
 

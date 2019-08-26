@@ -10,6 +10,7 @@ const {
 const JSON = require('circular-json');
 
 const getHandler = (req, res) => {
+
     try {
         if (req.params.id !== null && typeof req.params.id !== 'undefined') {
             approvalsService.get(req.params.id).then(function (result) {
