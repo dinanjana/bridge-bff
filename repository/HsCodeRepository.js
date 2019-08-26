@@ -58,27 +58,39 @@ const postHsCode = async (body) => {
         const response = await axios.post(url, body, {
             headers: headers
         })
+        console.error('-------->1');
+        console.error(response);
         return response;
     } catch (err) {
+        console.error('-------->2');
+        console.error(err);
         log.error(` Error occurred while inserting hs code- ${err}`, err);
         throw err;
     }
 };
 
 const putHsCode = async (body) => {
+    console.error('REPO-------->PUT A');
     const url = ENDPOINTS.HSCODE.base + '/' + client + ENDPOINTS.HSCODE.context;
+    console.error('REPO-------->PUT B');
     const headers = {
         'Content-Type': 'application/json',
         'InitiatedBy': username,
         'Client_ID': client
     }
+    console.error('REPO-------->PUT C');
     try {
         log.info(`Calling ${url}`);
+        console.error('REPO-------->PUT 0');
         const response = await axios.put(url, body, {
             headers: headers
         })
+        console.error('REPO-------->PUT 1');
         return response;
     } catch (err) {
+        console.error('REPO-------->PUT 2');
+        console.error(err)
+       
         log.error(`Error occurred while updating hs code- ${err}`, err);
         throw err;
     }

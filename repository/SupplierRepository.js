@@ -26,6 +26,7 @@ const getAll = async () => {
     try {
         log.info(`Calling ${url}`);
         const response = await axios.get(url);
+        console.error(response);
         return response;
     } catch (err) {
         log.error(`Error occurred while fetching hs code- ${err}`, err);

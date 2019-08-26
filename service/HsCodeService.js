@@ -24,11 +24,15 @@ const getHsCode = (id) => {
 const postHsCode = (body) => {
     log.info(`post HS Codes of ${body}`);
     const response = hscodeRepo.postHsCode(body);
+    console.error('SERVICE -------->1');
+    console.error(response);
+    
     return response;
 };
 
 const putHsCode = (body) => {
     log.info(`post HS Codes of ${body}`);
+    console.error('SERVICE -------->PUT');
     const response = hscodeRepo.putHsCode(body)
     return response;
 };
