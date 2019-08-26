@@ -59,7 +59,7 @@ const SUPPLIER = {
 };
 
 const INCOTERM = {
-  base: "http://localhost:3020",
+  base: "http://localhost:3010",
   context: "/incoterm"
 };
 const BANK = {
