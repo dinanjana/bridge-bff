@@ -9,14 +9,16 @@ const HTTP_METHODS = {
   DELETE: 'DELETE',
 };
 
+const HOST = 'localhost:8080';
+
 const AUTH = {
-  base: "http://localhost:8080/auth",
+  base: `${HOST}/auth`,
   endpoints: {
     login: {path: "/login", method: [HTTP_METHODS.POST] } }
 };
 
 const USER = {
-  base: "localhost:8080/auth",
+  base: `${HOST}/auth`,
   context: "/users",
   endpoints: {
     users: {path: "", method: [HTTP_METHODS.POST, HTTP_METHODS.PUT]},
@@ -27,7 +29,7 @@ const USER = {
 };
 
 const ROLE = {
-  base: "localhost:8080/auth",
+  base: `${HOST}/auth`,
   context: "/roles",
   endpoints: {
     roles: { path: "", method: [HTTP_METHODS.GET, HTTP_METHODS.POST] }
@@ -35,7 +37,7 @@ const ROLE = {
 };
 
 const PAGE = {
-  base: "localhost:8080/auth",
+  base: `${HOST}/auth`,
   context: "/pages",
   endpoints: {
     pages: { path: "", method: [HTTP_METHODS.GET, HTTP_METHODS.POST] },
@@ -77,6 +79,7 @@ const TRADE_AGREEMENT = {
   context: "/tradeagreement"
 };
 
+
 const ENDPOINTS = {
   AUTH,
   USER,
@@ -91,6 +94,13 @@ const ENDPOINTS = {
   TRADE_AGREEMENT
 };
 
+const OPS = {
+  read: 'read',
+  write: 'write',
+  edit: 'edit',
+  upload: 'upload',
+};
+
 module.exports = {
-  ENDPOINTS, HTTP_METHODS
+  ENDPOINTS, HTTP_METHODS, OPS
 };

@@ -4,6 +4,7 @@
 module.exports = {
   PATHS: {
     LOGIN: '/login',
+    USER: '/user',
     HSCODE: '/hscode',
     HSCODE_ID: '/hscode/:id',
     COUNTRYCODE: '/countries',

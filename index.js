@@ -17,7 +17,7 @@ const port = 8081;
 
 app.use(BodyParser.json());
 app.use(BodyParser.urlencoded({ extended: true }));
-app.use(cors())
+app.use(cors());
 const registerHandlers = () => {
   _.map(handlers, (handlers, path) => {
     _.map(handlers, ({method, handler}) => {

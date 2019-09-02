@@ -1,5 +1,5 @@
 const { _ } = require('lodash');
-const { user } = require('./user');
+const { user } = require('./user/user');
 const { hscode } = require('./hscode');
 const { countrycode } = require('./countrycode');
 const { regapproval } = require('./regapproval');

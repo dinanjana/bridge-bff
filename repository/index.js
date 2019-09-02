@@ -1,4 +1,5 @@
 const { createRedisClient, login, makeRequest } = require('./ApiRepository');
+const { createUser } = require('./user/UserRepository');
 const { getHsCodes, getHsCode, putHsCode, postHsCode } = require('./HsCodeRepository');
 const { getCountryCodes } = require('./CountryRepository');
 const approvalsRepo = require('./RegapprovalRepository');
@@ -8,7 +9,7 @@ const bankRepo = require('./BankRepository');
 const paymenttermRepo = require('./PaymenttermRepository');
 const tradeAgreementRepo = require('./TradeAgreementRepository');
 
-const userRepo = { login };
+const userRepo = { login, createUser };
 const hscodeRepo = { getHsCodes, getHsCode, putHsCode, postHsCode };
 const countryRepo = {getCountryCodes};
 const supplierRepo = { getAll, get, put, post};

@@ -1,4 +1,4 @@
-const { userService } = require('./UserService');
+const { userService } = require('./user/UserService');
 const { countryService } = require('./CountryService');
 const { approvalsService } = require('./RegapprovalService');
 const { supplierService } = require('./SupplierService');

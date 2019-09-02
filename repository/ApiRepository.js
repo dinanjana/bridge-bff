@@ -3,6 +3,7 @@
  */
 const axios = require('axios');
 const redis = require('redis');
+const _ = require('lodash');
 const { promisify } = require('util');
 const { REDIS, HTTP_METHODS, ENDPOINTS } = require('../conf');
 const log4js = require('log4js');
@@ -11,6 +12,10 @@ log4js.configure(require('../conf/log4js.json'));
 const log = log4js.getLogger('apiRepository');
 
 let client;
+
+const getClient = () => client;
+
+const getHeaders = (op, page) => ({ 'X-Op': op, 'X-page': page, });
 
 const createRedisClient = () => {
   if (!client) {
@@ -26,14 +31,19 @@ const createRedisClient = () => {
   };
 };
 
-const makeRequest = async (user, service, api, endpoint, method, body) => {
-  const userData = await client.getAsync(user);
-  if (!userData.token) {
-    throw new Error('Not a logged in user');
-  }
+const makeRequest = async (user, api, endpoint, method, body, headers, requireToken = true) => {
   let response = null;
-  const config = { headers: { 'Authorization': userData.token }};
-  const url = `${api.base}${api.base}/${api.endpoint[endpoint].path}`;
+  let config = {};
+  config.headers = headers;
+  if (requireToken) {
+    const userData = await client.getAsync(user);
+    if (!userData.token) {
+      throw new Error('Not a logged in user');
+    }
+    config = { headers: { ...config.headers, 'Authorization': userData.token }};
+  }
+
+  const url = `${api.base}${api.context}${api.endpoint[endpoint].path}`;
   switch(method) {
     case HTTP_METHODS.GET: {
       return axios.get(url, config);
@@ -72,10 +82,17 @@ const login = async (userName, password) => {
   }
 };
 
+const pages =
+  makeRequest(null, ENDPOINTS.PAGE, 'pages', HTTP_METHODS.GET, null, null, false)
+    .then((res) => _.reduce(res, (val) => ({val: val}), {}));
+
 module.exports = {
   createRedisClient,
   makeRequest,
   login,
+  getClient,
+  getHeaders,
+  pages,
 };
 
 

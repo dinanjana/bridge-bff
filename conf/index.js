@@ -1,7 +1,7 @@
 /**
  * Created by dinanjanag on 5/11/19.
  */
-const { ENDPOINTS, HTTP_METHODS } = require('./To');
+const { ENDPOINTS, HTTP_METHODS, OPS } = require('./To');
 const { ERROR_CODES } = require('./ErrorCodes');
 const { PATHS } = require('./Paths');
 
@@ -18,5 +18,6 @@ module.exports = {
   ERROR_CODES,
   REDIS,
   HTTP_METHODS,
-  PATHS
+  PATHS,
+  OPS,
 };

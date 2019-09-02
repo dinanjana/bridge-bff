@@ -1,10 +1,10 @@
 /**
  * Created by dinanjanag on 5/11/19.
  */
-const { userRepo } = require('../repository');
+const { userRepo } = require('../../repository/index');
 const log4js = require('log4js');
 
-log4js.configure(require('../conf/log4js.json'));
+log4js.configure(require('../../conf/log4js.json'));
 const log = log4js.getLogger('userService');
 
 
@@ -13,8 +13,14 @@ const loginUser = (user, password) => {
   return userRepo.login(user, password);
 };
 
+const createUser = (user) => {
+  log.info(`Create user ${user.userName}`);
+  return userRepo.createUser(user);
+};
+
 const userService = {
   loginUser,
+  createUser,
 };
 
 module.exports = {
