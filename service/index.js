@@ -6,6 +6,9 @@ const { incotermService } = require('./IncotermService');
 const { bankService } = require('./BankService');
 const { paymenttermService } = require('./PaymenttermService');
 const { tradeAgreementService } = require('./TradeAgreementService');
+const { materialService } = require('./MaterialService');
+const { materialtypeService } = require('./MaterialTypeService');
+const { mesureService } = require('./MesureService');
 
 
 module.exports = {
@@ -16,6 +19,9 @@ module.exports = {
   incotermService,
   bankService,
   paymenttermService,
-  tradeAgreementService
+  tradeAgreementService,
+  materialService,
+  materialtypeService,
+  mesureService
 };
 

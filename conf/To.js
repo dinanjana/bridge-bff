@@ -77,6 +77,21 @@ const TRADE_AGREEMENT = {
   context: "/tradeagreement"
 };
 
+const MATERIAL = {
+  base: "http://localhost:3010",
+  context: "/material"
+};
+
+const MATERIALTYPE = {
+  base: "http://localhost:3010",
+  context: "/materialtype"
+};
+
+const MESURE = {
+  base: "http://localhost:3010",
+  context: "/mesure"
+};
+
 const ENDPOINTS = {
   AUTH,
   USER,
@@ -88,7 +103,10 @@ const ENDPOINTS = {
   INCOTERM,
   BANK,
   PAYMENT_TERM,
-  TRADE_AGREEMENT
+  TRADE_AGREEMENT,
+  MATERIAL,
+  MATERIALTYPE,
+  MESURE
 };
 
 module.exports = {

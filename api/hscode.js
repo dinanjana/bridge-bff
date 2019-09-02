@@ -56,16 +56,13 @@ const postHandler = (req, res) => {
 const putHandler = (req, res) => {
     try {
         hsCodeService.putHsCode(req.body).then(function(result) {
-            console.error('----->1')
             const json = JSON.stringify(result.data);
             return res.send(json);
         }).catch(function(error) {
-            console.error('----->2')
             const json = JSON.stringify(error);
             return res.status(500).send(json);
         });
     } catch (error) {
-        console.error('----->3')
         const json = JSON.stringify(error);
         return res.status(500).send(json);
     }

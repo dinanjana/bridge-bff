@@ -19,5 +19,11 @@ module.exports = {
     PAYMENT_TERM_ID: '/paymentterm/:id',
     TRADE_AGREEMENT: '/tradeagreement',
     TRADE_AGREEMENT_ID: '/tradeagreement/:id',
+    MATERIAL: '/material',
+    MATERIAL_ID: '/material/:id',
+    MATERIALTYPE: '/materialtype',
+    MATERIALTYPE_ID: '/materialtype/:id',
+    MESURE: '/mesure',
+    MESURE_ID: '/mesure/:id',
   }
 };

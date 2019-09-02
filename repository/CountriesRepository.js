@@ -8,7 +8,7 @@ const { countries } = require('./countries');
 log4js.configure(require('../conf/log4js.json'));
 const log = log4js.getLogger('apiRepository');
 
-const getCountryCodes = () => {
+const getCountries = () => {
     try {
       return countries;
     } catch (err) {
@@ -18,6 +18,10 @@ const getCountryCodes = () => {
     }
   };
 
-  module.exports = {
-    getCountryCodes,
-  };
+const countriesRepo = {
+    getCountries,
+};
+
+module.exports = {
+  countriesRepo,
+};
