@@ -11,8 +11,11 @@ const { tradeagreement } = require('./tradeagreement')
 const { material } = require('./material')
 const { materialtype } = require('./materialtype')
 const { mesure } = require('./mesure')
+const { bltypes } = require('./bltypes')
+//const { stakeholder } = require('./stakeholder');
+const { stakeHolder } = require('./stakeHolder') 
 
-const handlers = { ...user,...hscode, ...countries, ...regapproval, ...supplier, ...incoterm, ...bank, ...paymentterm, ...tradeagreement, ...material, ...materialtype, ...mesure
+const handlers = { ...user,...hscode, ...countries, ...regapproval, ...supplier, ...incoterm, ...bank, ...paymentterm, ...tradeagreement, ...material, ...materialtype, ...mesure, ...bltypes, ...stakeHolder
  };
 
 module.exports = {

@@ -7,6 +7,8 @@ const log4js = require('log4js');
 log4js.configure(require('../conf/log4js.json'));
 const log = log4js.getLogger('supplierService');
 
+//supplier?? line 8
+
 const getAll = () => {
     log.info(`Get all material of client`);
     const response = materialRepo.getAll();

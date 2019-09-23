@@ -9,6 +9,8 @@ const { tradeAgreementService } = require('./TradeAgreementService');
 const { materialService } = require('./MaterialService');
 const { materialtypeService } = require('./MaterialTypeService');
 const { mesureService } = require('./MesureService');
+const { bltypeService } = require('./BlTypesService');
+const { stakeholderService } = require('./StakeholderService');
 
 
 module.exports = {
@@ -22,6 +24,10 @@ module.exports = {
   tradeAgreementService,
   materialService,
   materialtypeService,
-  mesureService
+  mesureService,
+  bltypeService,
+  stakeholderService,
+
+  
 };
 

@@ -25,5 +25,10 @@ module.exports = {
     MATERIALTYPE_ID: '/materialtype/:id',
     MESURE: '/mesure',
     MESURE_ID: '/mesure/:id',
+
+    STAKEHOLDER: '/stakeHolder',
+    Stake_ID : '/stakeHolder/:ID',
+
+
   }
 };

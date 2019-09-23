@@ -92,6 +92,13 @@ const MESURE = {
   context: "/mesure"
 };
 
+const STAKEHOLDER = {
+  base : "http://localhost:3010",
+  context : "/stakeHolder"
+}
+
+
+
 const ENDPOINTS = {
   AUTH,
   USER,
@@ -106,7 +113,8 @@ const ENDPOINTS = {
   TRADE_AGREEMENT,
   MATERIAL,
   MATERIALTYPE,
-  MESURE
+  MESURE,
+  STAKEHOLDER
 };
 
 module.exports = {
