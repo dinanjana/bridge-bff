@@ -13,8 +13,8 @@
 #############################################################################################################
 if [ $# -eq 0 ]; then
   docker build -t rebirthbridge/client-bff . &&
-    docker run -p 6379:6379 -p 8081:8080 -d rebirthbridge/client-bff:latest
+    docker run -p 8081:8080 -d rebirthbridge/client-bff:latest
 else
   docker build -t rebirthbridge/client-bff:${1} . &&
-    docker run -p 6379:6379 -p 8081:8080 -d rebirthbridge/client-bff:${1}
+    docker run -p 8081:8080 -d rebirthbridge/client-bff:${1}
 fi
