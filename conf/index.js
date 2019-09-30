@@ -8,7 +8,7 @@ const { PATHS } = require('./Paths');
 const BASE_URL = '/bridge';
 
 const REDIS = {
-  host: 'bridge-cache-ro.v2pmoc.ng.0001.apse1.cache.amazonaws.com',
+  host: 'localhost',
   port: 6379
 };
 

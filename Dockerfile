@@ -12,6 +12,4 @@ COPY . .
 
 EXPOSE 8080
 
-EXPOSE 6379
-
 CMD ["pm2-runtime", "./ecosystem.config.js", "--only", "client-bff"]
